@@ -52,8 +52,8 @@ def _conv_layer(layer, num_classes):
                             kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
 
 
-def _deconv_layer(layer, num_classes, kernal_size, strides):
-    return tf.layers.conv2d_transpose(layer, num_classes, kernal_size, strides, padding='same',
+def _deconv_layer(layer, num_classes, kernel_size, strides):
+    return tf.layers.conv2d_transpose(layer, num_classes, kernel_size, strides, padding='same',
                                       kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
 
 
